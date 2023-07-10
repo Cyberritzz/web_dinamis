@@ -16,7 +16,7 @@
           </div>
       
           <!-- Login Form -->
-          <form onsubmit="event.preventDefault(); processForm();">
+          <form action="/proses" method="post">
             <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
             <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password">
             <input type="submit" class="fadeIn fourth" value="Log In">
@@ -29,23 +29,6 @@
       
         </div>
       </div>
-    <script>
-        function processForm() {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            if (username === 'user' && password === 'user') {
-                window.location.href = 'http://localhost:8080/home';
-            } else {
-                var errorElement = document.createElement('p');
-                errorElement.textContent = 'Login gagal!';
-                document.body.appendChild(errorElement);
-                var linkElement = document.createElement('a');
-                linkElement.href = 'http://localhost:8080/login.html';
-                linkElement.textContent = 'Kembali ke Halaman Login';
-                document.body.appendChild(linkElement);
-            }
-        }
-    </script>
+      <script src="js/animas.js"></script>
 </body>
 </html>
